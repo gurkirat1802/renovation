@@ -6,15 +6,15 @@ const Footer = () => {
     return (
         <>
             <div className="bg-slate-200 px-10">
-                <div className="flex flex-col lg:flex-row justify-between p-10 space-y-8 lg:space-y-0">
-                    <div className="flex flex-col items-start max-w-sm">
+                <div className="flex flex-col lg:flex-row med:flex-row justify-between px-4 py-8 space-y-8 lg:space-y-0 med:space-y-0">
+                    <div className="flex flex-col items-start w-full med:max-w-sm">
                         <img src={img} alt="Logo" className="h-14 mb-4 rounded-3xl" />
-                        <p className="leading-relaxed">
+                        <p className="leading-relaxed sm:w-full text-justify">
                             At GD Renovation & Contracting, we turn your vision into reality with exceptional craftsmanship and unwavering dedication. As a trusted and certified contractor across Canada, we specialize in both residential and commercial renovations. Our steadfast commitment to quality and service means every project we undertake brings you one step closer to your dream space.
                         </p>
                     </div>
-                    <div>
-                        <h1 className="font-semibold mb-4 text-lg mt-8">SERVICES</h1>
+                    <div className="md:text-sm text-lg">
+                        <h1 className="font-semibold mb-4 md:mt-8 sm:mt-8">SERVICES</h1>
                         <ul className="space-y-2">
                             <li>
                                 <NavLink to="/services/fullhomerenovation" target="_top" activeClassName="active">
@@ -48,8 +48,8 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div>
-                        <h1 className="font-semibold mb-4 text-lg mt-8">USEFUL LINKS</h1>
+                    <div className="md:text-sm text-lg">
+                        <h1 className="font-semibold mb-4 md:mt-8 sm:mt-8">USEFUL LINKS</h1>
                         <ul className="space-y-2">
                             <li><NavLink to="/home" target="_top" className="hover:text-gray-700">HOME</NavLink></li>
                             <li><NavLink to="/aboutus" target="_top" className="hover:text-gray-700">ABOUT US</NavLink></li>
@@ -59,6 +59,9 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
+                    <div>
+                        
+                    </div>
                 <hr className="border-t-2 border-gray-300 my-4 mx-10" />
                 <div className="text-center py-4">
                     <p className="text-sm text-gray-600">© 2024 GD Renovation & Contracting. All rights reserved.</p>

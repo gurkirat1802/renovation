@@ -13,6 +13,7 @@ const Gallery = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [zoom, setZoom] = useState(1);
     const images = [img1, img2, img3, img4, img5, img6, img7, img8];
+
     const openLightbox = (index) => {
         setCurrentImageIndex(index);
         setIsOpen(true);
@@ -43,73 +44,74 @@ const Gallery = () => {
             document.exitFullscreen();
         }
     };
+
     return (
-        <>
-            <div className="p-10 bg-slate-100 mb-20">
-                <h1 className="ml-20 text-2xl">GALLERY</h1>
-                <p className="ml-20 mt-2 text-gray-600 leading-relaxed">From concept to completion, our recent projects showcase our commitment to pushing boundaries and delivering unparalleled quality in every detail.</p>
-                <div className="flex flex-wrap justify-center gap-2 mt-10">
-                    {images.map((img, index) => (
-                        <img
-                            key={index}
-                            src={img}
-                            alt={`Project ${index + 1}`}
-                            className="w-1/4 h-48 object-cover transition-transform duration-300 hover:scale-105 hover:brightness-75 cursor-pointer"
-                            onClick={() => openLightbox(index)}
-                        />
-                    ))}
-                    {isOpen && (
-                        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-                            <img
-                                src={images[currentImageIndex]}
-                                alt="Enlarged view"
-                                className="max-w-full max-h-full"
-                                style={{ transform: `scale(${zoom})` }}
-                            />
-                            <button
-                                onClick={prevImage}
-                                className="absolute left-4 text-white text-3xl p-2 bg-black bg-opacity-50 rounded-full"
-                            >
-                                &#8249;
-                            </button>
-                            <button
-                                onClick={nextImage}
-                                className="absolute right-4 text-white text-3xl p-2 bg-black bg-opacity-50 rounded-full"
-                            >
-                                &#8250;
-                            </button>
-                            <div className="absolute bottom-10 flex space-x-4 text-white text-xl">
-                                <button
-                                    onClick={zoomOut}
-                                    className="p-2 bg-black bg-opacity-50 rounded-full"
-                                >
-                                    &#8722;
-                                </button>
-                                <button
-                                    onClick={zoomIn}
-                                    className="p-2 bg-black bg-opacity-50 rounded-full"
-                                >
-                                    &#43;
-                                </button>
-                            </div>
-                            <button
-                                onClick={toggleFullScreen}
-                                className="absolute top-4 left-1/2 transform -translate-x-1/2 text-white text-xl p-2 bg-black bg-opacity-50 rounded-full"
-                            >
-                                &#x26F6;
-                            </button>
-                            <button
-                                onClick={closeLightbox}
-                                className="absolute top-4 right-4 text-white text-3xl"
-                            >
-                                &times;
-                            </button>
-                        </div>
-                    )}
-                </div>
+        <div className="p-5 bg-slate-100 mb-20">
+            <h1 className="text-center text-2xl sm:text-3xl md:text-4xl">GALLERY</h1>
+            <p className="text-center mt-2 text-gray-600 leading-relaxed mx-auto text-sm sm:text-base md:text-lg">
+                From concept to completion, our recent projects showcase our commitment to pushing boundaries and delivering unparalleled quality in every detail.
+            </p>
+            <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
+                {images.map((img, index) => (
+                    <img
+                        key={index}
+                        src={img}
+                        alt={`Project ${index + 1}`}
+                        className="w-full h-48 object-cover rounded-lg transition-transform duration-300 hover:scale-105 hover:brightness-75 cursor-pointer"
+                        onClick={() => openLightbox(index)}
+                    />
+                ))}
             </div>
-        </>
+            {isOpen && (
+                <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+                    <img
+                        src={images[currentImageIndex]}
+                        alt="Enlarged view"
+                        className="max-w-full max-h-full"
+                        style={{ transform: `scale(${zoom})` }}
+                    />
+                    <button
+                        onClick={prevImage}
+                        className="absolute left-4 text-white text-3xl p-2 bg-black bg-opacity-50 rounded-full"
+                    >
+                        &#8249;
+                    </button>
+                    <button
+                        onClick={nextImage}
+                        className="absolute right-4 text-white text-3xl p-2 bg-black bg-opacity-50 rounded-full"
+                    >
+                        &#8250;
+                    </button>
+                    <div className="absolute bottom-10 flex space-x-4 text-white text-lg sm:text-xl">
+                        <button
+                            onClick={zoomOut}
+                            className="p-2 bg-black bg-opacity-50 rounded-full"
+                        >
+                            &#8722;
+                        </button>
+                        <button
+                            onClick={zoomIn}
+                            className="p-2 bg-black bg-opacity-50 rounded-full"
+                        >
+                            &#43;
+                        </button>
+                    </div>
+                    <button
+                        onClick={toggleFullScreen}
+                        className="absolute top-4 left-1/2 transform -translate-x-1/2 text-white text-lg sm:text-xl p-2 bg-black bg-opacity-50 rounded-full"
+                    >
+                        &#x26F6;
+                    </button>
+                    <button
+                        onClick={closeLightbox}
+                        className="absolute top-4 right-4 text-white text-3xl"
+                    >
+                        &times;
+                    </button>
+                </div>
+            )}
+        </div>
     );
-}
+};
 
 export default Gallery;

@@ -11,20 +11,20 @@ const ServComp = () => {
     return (
         <>
             <div className="relative h-screen w-full">
-                <div className="absolute inset-0 bg-[url('./images/servimg.jpeg')] bg-contain bg-center h-3/4">
+                <div className="absolute inset-0 bg-[url('./images/servimg.jpeg')] bg-cover bg-center h-auto">
                     <div className="absolute inset-0 bg-black opacity-70"></div>
                 </div>
-                <h1 className="absolute font-bold text-6xl top-96 left-2/3 transform -translate-x-1/2 tracking-wider z-20 text-[#F5F5DC]">
+                <h1 className="absolute font-bold xl:text-6xl lg:text-5xl sm:text-4xl xs:text-2xl xs:font-semibold text-5xl bottom-8 xs:left-1/2 sm:left-2/3 transform -translate-x-1/2 tracking-wider z-20 text-[#F5F5DC]">
                     SERVICES
                 </h1>
             </div>
-            <div className="container mx-auto px-4 py-8">
+            <div className="container mx-auto px-4 py-8 mt-20">
                 <div className="flex flex-wrap -mx-4">
                     <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                         <Card4
                             image={img1}
                             title="FULL HOME RENOVATION"
-                            desc="Transform your entire living space with our comprehensive full home renovation services. We blend style, functionality, and superior craftsmanship to create a home that perfectly reflects your vision and lifestyle."
+                            desc="Transform your entire living space with our full home renovation services, crafted to reflect your unique style and needs."
                             link="./services/fullhomerenovation"
                         />
                     </div>
@@ -32,7 +32,7 @@ const ServComp = () => {
                         <Card4
                             image={img2}
                             title="LEGAL BASEMENT FINISHING"
-                            desc="Maximize your home's potential with our expert legal basement finishing services. Whether it's creating a cozy living space, we ensure your basement is transformed with quality craftsmanship."
+                            desc="Maximize your home's value with legal basement finishing, creating a functional space that meets all your needs."
                             link="./services/basementrenovation"
                         />
                     </div>
@@ -40,7 +40,7 @@ const ServComp = () => {
                         <Card4
                             image={img3}
                             title="PAINTING"
-                            desc="Elevate your home's aesthetic with our professional painting services. Whether it's refreshing interiors or revitalizing exteriors, we deliver flawless finishes and vibrant results that bring your vision to life."
+                            desc="Refresh your interiors and exteriors with flawless, vibrant finishes, crafted by our professional painting services."
                             link="./services/painting"
                         />
                     </div>
@@ -48,7 +48,7 @@ const ServComp = () => {
                         <Card4
                             image={img4}
                             title="KITCHEN REMODELING"
-                            desc="Transform your kitchen into a modern, functional space with our kitchen remodeling expertise. From custom cabinetry to innovative layouts, we create kitchens that are both stylish and highly efficient for your everyday needs."
+                            desc="Modernize your kitchen with custom designs and functional layouts, creating a space tailored for your everyday needs."
                             link="./services/kitchenremodeling"
                         />
                     </div>
@@ -56,7 +56,7 @@ const ServComp = () => {
                         <Card4
                             image={img5}
                             title="BATHROOM REMODELING"
-                            desc="Upgrade your bathroom into a luxurious retreat with our bathroom remodeling services. From sleek fixtures to contemporary designs, we craft spaces that blend comfort and style, tailored to your preferences."
+                            desc="Upgrade your bathroom with sleek fixtures and modern designs, blending luxury and functionality in every detail."
                             link="./services/bathroomremodeling"
                         />
                     </div>
@@ -64,7 +64,7 @@ const ServComp = () => {
                         <Card4
                             image={img6}
                             title="ACCENT WALLS"
-                            desc="Add a touch of elegance and personality to your space with our custom accent walls. We design unique feature walls that enhance the character of any room, making bold design statements that stand out."
+                            desc="Enhance your space with unique accent walls, designed to make a bold statement and elevate any room's character."
                             link="./services/accentwalls"
                         />
                     </div>

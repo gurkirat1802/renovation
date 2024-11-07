@@ -10,9 +10,12 @@ export default {
         blue:{
           700:"#146eb4"
         }
-      }
+      },
+      screens: {
+        'med': '950px',
+        'xs': '310px',
+      },
     },
   },
   plugins: [],
 }
-

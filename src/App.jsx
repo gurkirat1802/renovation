@@ -16,8 +16,8 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="https://renovation-eight.vercel.app/home" element={<HomePage />} />
-        <Route path="https://renovation-eight.vercel.app/aboutus" element={<AboutUsPage />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/aboutus" element={<AboutUsPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/contactus" element={<ContactUsPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />

@@ -19,13 +19,13 @@ const Navbar = () => {
                                 src={Logo}
                                 alt="Logo"
                                 className="h-14 mr-4 rounded-3xl px-1 cursor-pointer"
-                                onClick={() => navigate("/home")}
+                                onClick={() => navigate("https://renovation-seven.vercel.app/home")}
                             />
                         </div>
                         <div className="hidden md:block">
                             <div className="flex space-x-4">
                                 <NavLink
-                                    to="/home"
+                                    to="https://renovation-seven.vercel.app/home"
                                     target="_top"
                                     className={({ isActive }) =>
                                         `text-gray-800 px-3 py-2 rounded-md text-sm font-medium tracking-widest transition-colors duration-300 ${isActive ? "text-green-800" : "hover:text-blue-800"
@@ -35,7 +35,7 @@ const Navbar = () => {
                                     HOME
                                 </NavLink>
                                 <NavLink
-                                    to="/aboutus"
+                                    to="https://renovation-seven.vercel.app/aboutus"
                                     target="_top"
                                     className={({ isActive }) =>
                                         `text-gray-800 px-3 py-2 rounded-md text-sm font-medium tracking-widest transition-colors duration-300 ${isActive ? "text-green-800" : "hover:text-blue-800"

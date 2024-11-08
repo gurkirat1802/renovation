@@ -77,6 +77,7 @@ const Testimonials = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+
                 },
             },
         ],
@@ -88,20 +89,20 @@ const Testimonials = () => {
             <p className="text-center mt-2 text-gray-600 leading-relaxed">
                 Our success is reflected in the voices of our clients.
             </p>
-            <div className="mt-6 w-full mx-auto px-4 sm:px-8 md:px-16 lg:px-20 relative mb-20 overflow-hidden py-8">
-                <Slider {...settings}>
-                    <div className="px-2 md:px-4 lg:px-6">
+            <div className="mt-6 w-full mx-auto px-16 sm:px-14 md:px-13 lg:px-18 relative mb-20 overflow-hidden py-8">
+                <Slider className="" {...settings}>
+                    <div className="w-32 px-2 md:px-4 lg:px-6">
                         <Card3
                             title="Full Home Renovations"
-                            desc="GD Renovation & Contracting transformed our outdated home into a modern masterpiece. The attention to detail and quality of work were outstanding. From start to finish, the team was professional, punctual, and respectful of our space. We couldn't be happier with the results!"
+                            desc="GD Renovation & Contracting turned our home into a modern masterpiece with amazing attention to detail. Highly professional and respectful!"
                             name="Michal S."
                             address="Toronto, Canada"
                         />
                     </div>
-                    <div className="px-2 md:px-4 lg:px-6">
+                    <div className="flex justify-center items-center md:px-4 lg:px-6">
                         <Card3
                             title="Legal Basement Finishing"
-                            desc="We hired GD Renovation & Contracting to finish our basement, and they did an exceptional job. The process was seamless, and they were very knowledgeable about legal requirements. Our basement is now a beautiful and functional living space. Highly recommended!"
+                            desc="They finished our basement beautifully and ensured everything was up to code. The process was seamless and the results are fantastic!"
                             name="Sarah W."
                             address="Markham, Canada"
                         />
@@ -109,7 +110,7 @@ const Testimonials = () => {
                     <div className="px-2 md:px-4 lg:px-6">
                         <Card3
                             title="Painting"
-                            desc="The painting service provided by GD Renovation & Contracting was top-notch. They helped us choose the perfect colors and finished the job quickly and efficiently. The final result was flawless, and our home feels refreshed and vibrant. We'll definitely use their services again."
+                            desc="They helped us pick the perfect colors, and the finish is flawless. Our home feels refreshed and vibrant. Highly recommended!"
                             name="John L."
                             address="Brampton, Canada"
                         />
@@ -117,7 +118,7 @@ const Testimonials = () => {
                     <div className="px-2 md:px-4 lg:px-6">
                         <Card3
                             title="Kitchen Remodeling"
-                            desc="Our kitchen was in desperate need of an update, and GD Renovation & Contracting delivered beyond our expectations. The design is both stylish and functional, with high-quality materials and craftsmanship. They listened to our needs and brought our vision to life. We love our new kitchen."
+                            desc="GD Renovation delivered a beautiful, functional kitchen that exceeded our expectations. Great attention to detail and quality materials!"
                             name="Emily"
                             address="Toronto, Canada"
                         />
@@ -125,7 +126,7 @@ const Testimonials = () => {
                     <div className="px-2 md:px-4 lg:px-6">
                         <Card3
                             title="Bathroom Remodeling"
-                            desc="GD Renovation & Contracting completely transformed our bathroom into a luxurious space. They paid close attention to every detail, from the tiles to the fixtures, and made sure everything was perfect. The team was professional and courteous, and the project was completed on time."
+                            desc="They transformed our bathroom into a luxury space with high-quality fixtures and perfect finishes. Very professional team!"
                             name="David"
                             address="Ontario, Canada"
                         />
@@ -133,7 +134,7 @@ const Testimonials = () => {
                     <div className="px-2 md:px-4 lg:px-6">
                         <Card3
                             title="Accent Walls"
-                            desc="We wanted to bring a unique touch to our living room, and GD Renovation & Contracting recommended an accent wall. The result exceeded our expectations! The wall adds incredible depth and character to the room, and the quality of workmanship is outstanding."
+                            desc="The accent wall they installed adds incredible character to our room. Top-notch craftsmanship and unique style!"
                             name="George T."
                             address="Brampton, Canada"
                         />
